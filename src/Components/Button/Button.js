@@ -7,12 +7,14 @@ const ContainedButtons = ({...props}) => {
   const useStyles = makeStyles((theme) => ({
     root: {
       "& > *": {
-        margin: theme.spacing(1),
         borderRadius: `${props.height * 0.178 + 'px'}`,
         background: `linear-gradient(180deg, ${props.color[0]} 0%, ${props.color[1]} 100%)`,
         height: props.height,
         width: props.width,
-        textTransform: "none"
+        textTransform: "none",
+        fontFamily: "Libre Franklin",
+        fontSize: "20px",
+        fontWeight: "bold",
       }
     }
   }));
