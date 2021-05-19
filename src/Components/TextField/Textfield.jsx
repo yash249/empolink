@@ -34,6 +34,8 @@ const TextBox = (props) => {
         placeholder={props.placeholder}
         value={props.value}
         size={props.size}
+        endAdornment = {props.endAdornment}
+        InputProps = {props.InputProps}
       />
     </div>
     </div>

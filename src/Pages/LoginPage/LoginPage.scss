@@ -4,7 +4,6 @@
     width: 205px;
     margin-left: 10px;
     display: inline-block;
-    // margin-top: 30px;
   }
 
 .empoLinkImgStyles{
@@ -23,14 +22,6 @@
 
 
 .empolink {
-    // letter-spacing: 2.84px;
-    // line-height: 35px;
-    // min-height: 49px;
-    // min-width: 201px;
-    // white-space: nowrap;
-    // padding-left: 13px;
-    // // padding-top: 27px;
-    // margin-top: 108px;
     padding-left: 13px;
     margin-top: 108px;
     margin-bottom: 87px;
@@ -57,7 +48,6 @@
 
 .loginCard{
     position: absolute;
-    // padding-left: 266.8px;
     padding-left: 26.895% !important;
 }
 
@@ -78,4 +68,12 @@
 .sign-up{
     font-family: "Libre Franklin";
     font-size: 20px;
+    color: #9a9a9a;
+}
+
+.google-sign-in{
+    font-family: 'Libre Franklin';
+    font-size: 20px;
+    color: #9a9a9a;
+    margin-left: 85px;
 }
