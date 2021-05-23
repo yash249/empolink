@@ -121,8 +121,12 @@ class LoginPage extends Component {
                         <div>
                             <div style={{ display: "inline-block" }}>
                                 <FormControlLabel
-                                    control={<Checkbox checked={this.state.isRememberMeChecked} onChange={() => { this.setState({ isRememberMeChecked: !this.state.isRememberMeChecked }) }} name="checkedA" />}
-                                    label="Remember Me"
+                                    control={<Checkbox
+                                        style ={{
+                                            color: "#c7c7c7",
+                                          }}
+                                         checked={this.state.isRememberMeChecked} onChange={() => { this.setState({ isRememberMeChecked: !this.state.isRememberMeChecked }) }} name="rememberMe" />}
+                                    label={<div className = "rememberMe"> Remember me </div>}
                                 />
                             </div>
                             <div className='sign-up' style={{ paddingTop: "8px", cursor: "pointer", display: "inline-block", color: "#5bb2fc", float: 'right' }}>Forgot ?</div>
