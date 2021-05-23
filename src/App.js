@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.scss';
 import LoginPage from './Pages/LoginPage/LoginPage'
 import RegisterPage from './Pages/Register/RegisterPage'
+import RegisterRedirectionPage from './Pages/Register/RegisterRedirectionPage'
 import StripePaymentsPage from './Pages/StripePaymentsPage/StripePaymentsPage'
 import {
   BrowserRouter as Router,
@@ -13,7 +14,7 @@ import {
 function App() {
   return (
     <div style={{ width: "100%", height: "100%" }}>
-      <LoginPage/>
+      {/* <LoginPage/> */}
       <Router>
         <div>
           <Switch>
@@ -21,7 +22,7 @@ function App() {
               <LoginPage />
             </Route>
             <Route path="/register">
-              <RegisterPage />
+              <RegisterRedirectionPage />
             </Route>
             {/* <Route path="/">
             <Home />

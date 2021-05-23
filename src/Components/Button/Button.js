@@ -7,7 +7,7 @@ const ContainedButtons = ({...props}) => {
   const useStyles = makeStyles((theme) => ({
     root: {
       "& > *": {
-        borderRadius: `${props.height * 0.178 + 'px'}`,
+        borderRadius: '10px',
         background: `linear-gradient(180deg, ${props.color[0]} 0%, ${props.color[1]} 100%)`,
         height: props.height,
         width: props.width,

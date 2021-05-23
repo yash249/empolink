@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import '../Register/RegisterPage.scss'
 import TextBox from '../../Components/TextField/Textfield'
 import Button from '../../Components/Button/Button'
-import { makeStyles } from "@material-ui/core/styles";
 import Stepper from '../../Components/Stepper/Stepper';
-import BusinessInfoPageOne from './BusinessInfoPageOne'
+import { withRouter } from 'react-router-dom';
 
-class RegisterPage extends Component {
+class BusinessInfoPageOne extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -18,11 +17,14 @@ class RegisterPage extends Component {
         }
     }
 
+    onNextClicked(){
+        this.props.history.push('/register/3');
+    }
+
     render() {
-        // const classes = useStyles();
         return (
             <>
-                <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
+                <div style={{ width: '100%', height: '1080px', position: 'absolute' }}>
                     <div style={{ background: '#23286b', width: '24.16%', height: '100%', position: 'absolute' }}>
                         <h1 className="empolink-heading">EmpoLink</h1>
                     </div>
@@ -36,53 +38,60 @@ class RegisterPage extends Component {
                                 <div style={{ width: "100%", height: "100%" }}>
                                     <div style={{ paddingBottom: '18px' }}>
                                         <TextBox
+                                            required={true}
                                             label={"First Name"}
-                                            onChange={() => { }}
-                                            value={""}
+                                            onChange={(event) => { this.setState({firstName: event.target.value})}}
+                                            value={this.state.firstName}
                                             width={"100%"}
                                         />
                                     </div>
                                     <div style={{ paddingBottom: '18px' }} >
                                         <TextBox
+                                            required={true}
                                             label={"Last Name"}
-                                            onChange={() => { }}
-                                            value={""}
+                                            onChange={(event) => { this.setState({lastName: event.target.value})}}
+                                            value={this.state.lastName}
                                             width={"100%"}
                                         />
                                     </div>
                                     <div style={{ paddingBottom: '18px' }} >
                                         <TextBox
+                                            required={true}
                                             label={"Company/BusinessName"}
-                                            onChange={() => { }}
-                                            value={""}
+                                            onChange={(event) => { this.setState({companyName: event.target.value})}}
+                                            value={this.state.companyName}
                                             width={"100%"}
                                         />
                                     </div>
                                     <div style={{ paddingBottom: '18px' }} >
                                         <TextBox
                                             label={"Mobile number"}
-                                            onChange={() => { }}
-                                            value={""}
+                                            onChange={(event) => { this.setState({mobileNumber: event.target.value})}}
+                                            value={this.state.mobileNumber}
                                             width={"100%"}
                                         />
                                     </div>
-                                    <div style={{ paddingBottom: '18px' }} >
+                                    <div style={{ paddingBottom: '47px' }} >
                                         <TextBox
                                             label={"Language(s)"}
-                                            onChange={() => { }}
-                                            value={""}
+                                            onChange={(event) => { this.setState({languages: event.target.value})}}
+                                            value={this.state.languages}
                                             width={"100%"}
                                         />
                                     </div>
-                                </div>                                <Button
+                                </div>
+                                <Button
                                     text='Next'
                                     width={"100%"}
                                     height='56px'
-                                    onClick={() => console.log("Button Clicked")}
+                                    onClick = {() => this.onNextClicked()}
                                     color={["#2699fb", "#134d7e"]}
                                 />
-                                <div style={{ textAlign: 'center', paddingTop: '4.351%' }}>
-                                    <Stepper />
+                                <div style={{ textAlign: 'center', paddingTop: '47px' }}>
+                                    <Stepper
+                                        steps = {3}
+                                        activeStep = {0}
+                                     />
                                 </div>
                             </div>
                         </div>
@@ -93,4 +102,4 @@ class RegisterPage extends Component {
     }
 }
 
-export default RegisterPage;
+export default withRouter(BusinessInfoPageOne);
